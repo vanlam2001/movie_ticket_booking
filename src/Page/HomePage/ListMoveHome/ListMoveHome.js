@@ -9,6 +9,7 @@ export default function ListMoveHome() {
     useEffect(() => {
         movieServ.getMovieList()
         .then((res) => {
+            //tạo ra arr mới theo mỗi trang có 8 phim
             let newListMovie = pageSplitListMovie(res.data.content, 8)
             setListMovie(newListMovie);
         })
@@ -17,7 +18,7 @@ export default function ListMoveHome() {
         })
         
     }, [])
-
+    // map lại arr movie thành các arr nhỏ theo từng trang
     let pageSplitListMovie = (arr, quantity) => {
         let newArr = [];
         for(let i = 0; i< arr.length; i+=quantity) {
