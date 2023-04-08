@@ -1,6 +1,10 @@
 import React from 'react'
+import { Button, Checkbox, Form, Input, message } from 'antd';
+
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 function Register() {
+
 
     return (
         <div>
@@ -16,7 +20,7 @@ function Register() {
                         </div>
                     </div>
                     <div className="mt-10">
-                        <Form onFinish={onFinish}>
+                        <Form>
                             <label for="UserName" className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">Tài khoản:</label>
                             <Form.Item name="taiKhoan" rules={[{ required: true, message: 'Vui lòng nhập tên người dùng!' }]}>
                                 <Input className='text-sm sm:text-base placeholder-gray-500  rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400' prefix={<UserOutlined />} placeholder="UserName" />

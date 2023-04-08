@@ -1,18 +1,9 @@
-
-import axios from "axios";
-import { https } from "./config";
+import { https } from "./config"
 export const userServ = {
-    login: (loginData) => {
-
-        return axios({
-            url: `${BASE_URL}/api/QuanLyNguoiDung/DangNhap`,
-            method: "POST",
-            data: loginData,
-            headers: configHeaders(),
-        });
+    login: (login) => {
+        return https.post('/api/QuanLyNguoiDung/DangNhap', login)
     },
+    register: (userInfo) => {
+        return https.post('/api/QuanLyNguoiDung/DangKy', userInfo);
+    }
 };
-
-userServ.login();
-
-
