@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core"
-import { customScrollbar } from '../../../../styles/materialUi';
+import { customScrollbar } from "./materialUi"
 
 const useStyle = makeStyles({
     // search bar
@@ -20,6 +20,7 @@ const useStyle = makeStyles({
 
         alignItems: "center",
     },
+
     itemFirst: {
         padding: '1%',
         flex: "30%",
@@ -68,6 +69,7 @@ const useStyle = makeStyles({
             display: "none"
         },
     },
+
     popupIndicator: {
         '& > span': {
             marginTop: 0,
@@ -77,6 +79,7 @@ const useStyle = makeStyles({
             },
         },
     },
+
     listbox: {
         ...customScrollbar,
         '& .MuiAutocomplete-option[aria-selected="true"]': {
@@ -84,9 +87,11 @@ const useStyle = makeStyles({
             color: "#fff",
         }
     },
+
     paper: {
         boxShadow: "0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%)",
     },
+
     noOptions: {
         color: "#000",
         fontSize: 14,
@@ -136,6 +141,7 @@ const useStyle = makeStyles({
 
     // popup menu
     menu: { maxHeight: 300, ...customScrollbar },
+
     menu__item: {
         width: '100%',
         minHeight: "auto",
