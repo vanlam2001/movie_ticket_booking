@@ -1,6 +1,6 @@
 
 import axios from "axios";
-import { BASE_URL, configHeaders } from "./config"
+import { https } from "./config";
 export const userServ = {
     login: (loginData) => {
 
