@@ -116,7 +116,7 @@ export default function SelectHome() {
           <div className='listSelect flex grow'>
             {searchBox.map((item, index) => {
               return (
-                <div key={index} className="itemSelect grow">
+                <div key={index} className="itemSelect grow px-2">
                   <Select
                   className='w-full'
                   defaultValue={{
