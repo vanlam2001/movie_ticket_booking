@@ -1,6 +1,9 @@
 import React from 'react'
 import Banner from '../../Components/Banner/Banner'
 import Header from '../../Components/Header/Header'
+import SelectHome from '../../Components/Select/SelectHome'
+
+
 
 
 
@@ -11,7 +14,7 @@ export default function HomePage() {
         <div>
             <Header></Header>
             <Banner></Banner>
-
+            <SelectHome></SelectHome>
         </div>
     )
 }
