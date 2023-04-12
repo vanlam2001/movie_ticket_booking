@@ -91,9 +91,13 @@ export default function Usermenu() {
                             Đăng nhập
                         </a>
                     </NavLink>
-                    <a href="" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                        Đăng ký
-                    </a>
+
+                    <NavLink to={"/register"}>
+                        <a href="" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                            Đăng ký
+                        </a>
+                    </NavLink>
+
 
 
                 </>

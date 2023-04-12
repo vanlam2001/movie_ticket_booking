@@ -5,7 +5,11 @@
   "dependencies": {
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.0.16",
+<<<<<<< HEAD
     "@material-ui/core": "^4.12.4",
+=======
+    "@reduxjs/toolkit": "^1.9.3",
+>>>>>>> register
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -27,6 +31,11 @@
     "react-slick": "^0.29.0",
     "react-transition-group": "^4.4.5",
     "redux": "^4.2.1",
+<<<<<<< HEAD
+=======
+    "tw-elements": "^1.0.0-beta1",
+    "validator": "^13.9.0",
+>>>>>>> register
     "web-vitals": "^2.1.4"
   },
   "scripts": {
