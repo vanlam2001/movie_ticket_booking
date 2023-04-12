@@ -6,3 +6,4 @@ export const movieServ = {
         return https.get("/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP07");
     }
 }
+
