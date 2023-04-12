@@ -92,7 +92,7 @@ function Register() {
                             </Form.Item>
 
                             <label for="Phone" className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">Nhập Số Điện Thoại:</label>
-                            <Form.Item name="soDT" rules={[{ required: true, message: 'Vui lòng nhập số điện thoại!' }]}>
+                            <Form.Item name="soDt" rules={[{ required: true, message: 'Vui lòng nhập số điện thoại!' }]}>
                                 <Input className='text-sm sm:text-base placeholder-gray-500  rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400' prefix={<PhoneOutlined />} placeholder="Nhập số điện thoại" />
                             </Form.Item>
 

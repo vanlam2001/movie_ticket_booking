@@ -4,7 +4,7 @@ import validator from "validator";
 const { isLength } = require('validator');
 const { equals } = require('validator');
 const { matches } = require('validator');
-const { isMobilePhone } = require('validator');
+
 
 
 
@@ -72,16 +72,17 @@ export const checkEmail = (email) => {
 
 export const checkPhoneVietNam = (soDt) => {
     let flag = false;
-    // Kiểm tra số điện thoại ở Việt Nam
-    const isPhoneNumberValid = isMobilePhone(soDt, /^\d{10}$/);
 
-    if (isPhoneNumberValid) {
+    const validator = require('validator');
+
+    if (validator.isMobilePhone(soDt, 'vi-VN')) {
         flag = true;
     }
 
     else {
-        message.error("Số điện thoại không hợp lệ!")
+        message.error('Số điện thoại không hợp lệ!');
     }
 
     return flag;
+
 } 
