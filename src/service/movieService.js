@@ -6,6 +6,7 @@ export const movieServ = {
 
         return https.get("/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP04");
     },
+<<<<<<< HEAD
     getMovieRap: () => {
         return https.get("/api/QuanLyRap/LayThongTinHeThongRap?maNhom=GP04")
     },
@@ -15,6 +16,10 @@ export const movieServ = {
 
     getMovieList: () => {
         return https.get("/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP07");
+=======
+    getMovieByTheater: () => {
+        return https.get("/api/QuanLyRap/LayThongTinLichChieuHeThongRap");
+>>>>>>> TabsMovieHome
     }
 }
 
