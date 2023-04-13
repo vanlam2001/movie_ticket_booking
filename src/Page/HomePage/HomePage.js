@@ -1,8 +1,6 @@
 import React from 'react'
 import Banner from '../../Components/Banner/Banner'
 import Header from '../../Components/Header/Header'
-<<<<<<< HEAD
-
 
 
 import SelectHome from '../../Components/Select/SelectHome'
@@ -17,9 +15,9 @@ import TabsMovieHome from '../../Components/TabsMovieHome/TabsMovieHome'
 
 import DowloadApp from '../../Components/DowloadApp/DowloadApp'
 
-=======
+
 import Footer from '../../Components/Footer/Footer'
->>>>>>> footer
+
 
 
 export default function HomePage() {
@@ -27,7 +25,7 @@ export default function HomePage() {
         <div>
             <Header></Header>
             <Banner></Banner>
-<<<<<<< HEAD
+
 
 
 
@@ -40,9 +38,9 @@ export default function HomePage() {
 
             <DowloadApp></DowloadApp>
 
-=======
+
             <Footer></Footer>
->>>>>>> footer
+
         </div>
     )
 }
