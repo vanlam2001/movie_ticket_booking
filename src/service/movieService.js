@@ -22,4 +22,3 @@ export const movieServ = {
         return https.get("/api/QuanLyRap/LayThongTinLichChieuHeThongRap");
     }
 }
-
