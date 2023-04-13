@@ -87,15 +87,15 @@ export default function Footer() {
     ]
     return listPartner.map((item) => {
       return (
-              <div>
-                <a className="inline-block" href={item.linkWeb}>
-                  <img
-                    className="w-8 rounded-full"
-                        src={item.linkImage}
-                    alt=""
-                  />
-                </a>
-              </div>
+        <div>
+          <a className="inline-block" href={item.linkWeb}>
+            <img
+              className="w-8 rounded-full"
+              src={item.linkImage}
+              alt=""
+            />
+          </a>
+        </div>
       )
     })
   }
@@ -191,7 +191,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="my-4"/>
+        <hr className="my-4" />
 
         <div className="text-center lg:text-left md:flex py-5">
           <div className="md:w-1/6 w-full">
