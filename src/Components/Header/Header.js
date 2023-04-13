@@ -3,6 +3,7 @@ import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Usermenu from './Usermenu'
 
+
 const navigation = {
     categories: [
         {
@@ -117,11 +118,11 @@ export default function Example() {
                 </Dialog>
             </Transition.Root>
 
-            <header className="relative bg-white">
+            <header className="relative bg-white h-20 ">
 
 
-                <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="border-b border-gray-200">
+                <nav aria-label="Top" className=" bg-white  fixed top-2 left-0 right-0 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="border-b border-gray-200 ">
                         <div className="flex h-16 items-center">
                             <button
                                 type="button"
@@ -230,6 +231,8 @@ export default function Example() {
                         </div>
                     </div>
                 </nav >
+
+
             </header >
         </div >
     )
