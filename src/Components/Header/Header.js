@@ -118,10 +118,10 @@ export default function Example() {
                 </Dialog>
             </Transition.Root>
 
-            <header className="relative bg-white h-20 ">
+            <header className="relative bg-white">
 
 
-                <nav aria-label="Top" className=" bg-white  fixed top-2 left-0 right-0 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <nav aria-label="Top" className=" bg-white  mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="border-b border-gray-200 ">
                         <div className="flex h-16 items-center">
                             <button
@@ -231,7 +231,6 @@ export default function Example() {
                         </div>
                     </div>
                 </nav >
-
 
             </header >
         </div >
