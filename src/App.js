@@ -14,9 +14,10 @@ function App() {
           <Route path='/' element={<Layout Component={HomePage} />}></Route>
           <Route path='/login' element={<LoginPage></LoginPage>}></Route>
 
-          <Route path='/booking/:id' element={<BookTicketPage />}></Route>
+          <Route path='/booking/:id' element={<Layout Component={BookTicketPage} />}></Route>
 
           <Route path='/register' element={<Register></Register>}></Route>
+
 
         </Routes>
       </BrowserRouter>
