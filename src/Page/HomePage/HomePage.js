@@ -39,7 +39,7 @@ export default function HomePage() {
             <DowloadApp></DowloadApp>
 
 
-            <Footer></Footer>
+
 
         </div>
     )
