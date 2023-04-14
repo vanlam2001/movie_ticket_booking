@@ -23,7 +23,7 @@ import Footer from '../../Components/Footer/Footer'
 export default function HomePage() {
     return (
         <div>
-            <Header></Header>
+
             <Banner></Banner>
 
 
