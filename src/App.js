@@ -4,6 +4,7 @@ import HomePage from './Page/HomePage/HomePage';
 import LoginPage from './Page/LoginPage/LoginPage';
 import Register from './Page/Register/Register';
 import Layout from './Layout/Layout';
+import DetailPage from './Page/DetailPage/DetailPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout Component={HomePage} />}></Route>
           <Route path='/login' element={<LoginPage></LoginPage>}></Route>
+          <Route path='/detail/:id' element={<Layout Component={DetailPage} />}></Route>
 
 
 

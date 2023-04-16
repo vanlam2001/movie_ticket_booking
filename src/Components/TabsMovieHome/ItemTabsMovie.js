@@ -11,8 +11,8 @@ export default function ItemTabsMovie({ phim }) {
                     {phim.tenPhim}
                 </h3>
                 <div className='grid grid-cols-2 gap-4 mt-3'>
-                    {phim.lstLichChieuTheoPhim.slice(0, 4).map((lichhieu) => {
-                        return <div className='px-2 py-1 border-2 rounded cursor-pointer'>
+                    {phim.lstLichChieuTheoPhim.slice(0, 4).map((lichhieu, index) => {
+                        return <div key={index} className='px-2 py-1 border-2 rounded cursor-pointer'>
                             <span className='text-green-500'>
                                 {moment(lichhieu.ngayChieuGioChieu).format('DD-mm-yyyy ')}
                             </span>

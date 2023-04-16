@@ -85,9 +85,9 @@ export default function Footer() {
       },
 
     ]
-    return listPartner.map((item) => {
+    return listPartner.map((item, index) => {
       return (
-        <div>
+        <div key={index}>
           <a className="inline-block" href={item.linkWeb}>
             <img
               className="w-8 rounded-full"
