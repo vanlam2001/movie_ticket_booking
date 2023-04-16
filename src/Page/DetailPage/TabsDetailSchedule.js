@@ -17,7 +17,7 @@ export default function TabsDetailSchedule() {
         children: (
           <div>
             {heThongRap.cumRapChieu.map((cumRap) => {
-              return <ItemTabsDetailSchedule key={cumRap.maCumRap} cumRap={cumRap}/>
+              return <ItemTabsDetailSchedule key={cumRap.maCumRap} cumRap={cumRap} />
             })}
           </div>
         ),
@@ -27,9 +27,9 @@ export default function TabsDetailSchedule() {
 
   return (
     <div className='border-2 border-gray-200 mt-10'>
-      <Tabs style={{height: 700}}
-      tabPosition={tabPosition}
-      defaultActiveKey="1" items={renderShedule()} onChange={onChange} />
+      <Tabs style={{ height: 700 }}
+        tabPosition={tabPosition}
+        defaultActiveKey="1" items={renderShedule()} onChange={onChange} />
     </div>
   )
 }
