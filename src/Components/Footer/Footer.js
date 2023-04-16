@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   let renderPartner = () => {
@@ -88,13 +89,13 @@ export default function Footer() {
     return listPartner.map((item, index) => {
       return (
         <div key={index}>
-          <a className="inline-block" href={item.linkWeb}>
+          <NavLink className="inline-block" href={item.linkWeb}>
             <img
               className="w-8 rounded-full"
               src={item.linkImage}
               alt=""
             />
-          </a>
+          </NavLink>
         </div>
       )
     })
