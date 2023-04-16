@@ -106,7 +106,7 @@ export default function SelectHome() {
       alert("Bạn chưa chọn phim");
     }
     else {
-      navigate(`/booking/${idMovieTime}`);
+      navigate(`/detail/${idMovieTime}`);
     }
   };
 
