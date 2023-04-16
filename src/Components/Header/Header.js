@@ -123,12 +123,7 @@ export default function Header() {
                                 </Tab.Group>
 
                                 <div className="space-y-6 border-t border-gray-200 py-6 px-4">
-                                    {navigation.rap.map((page) => (
-                                        <div key={page.name} className="flow-root">
-                                            <NavLink className="-m-2 block p-2 font-medium text-black" to={"/rap"}>{page.name}</NavLink>
 
-                                        </div>
-                                    ))}
 
                                     {navigation.ungdung.map((page) => (
                                         <div key={page.name} className="flow-root">
