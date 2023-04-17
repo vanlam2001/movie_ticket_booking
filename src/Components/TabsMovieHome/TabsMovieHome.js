@@ -42,8 +42,8 @@ export default function TabsMovieHome() {
                                     ),
                                     children: (
                                         <div className='w-full h-[700px] overflow-x-scroll'>
-                                            {cumRap.danhSachPhim.map((phim) => {
-                                                return <ItemTabsMovie phim={phim} />
+                                            {cumRap.danhSachPhim.map((phim, index) => {
+                                                return <ItemTabsMovie key={index} phim={phim} />
                                             })}
                                         </div>
                                     ),

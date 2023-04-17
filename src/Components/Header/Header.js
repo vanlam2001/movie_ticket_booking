@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Usermenu from './Usermenu'
+import { NavLink } from 'react-router-dom'
 
 
 const navigation = {
@@ -11,17 +12,27 @@ const navigation = {
             name: 'Trang chủ',
 
 
-        },
+        }
+
+    ],
+
+    lichChieu: [
         {
             id: 'Lịch chiếu',
             name: 'Lịch chiếu',
 
-        },
+        }
     ],
-    pages: [
-        { name: 'Tin tức', href: '#' },
-        { name: 'Ứng dụng', href: '#' },
+
+    rap: [
+        { name: 'Rạp' }
     ],
+
+    ungdung: [
+        { name: 'Ứng dụng', href: '#' }
+    ]
+
+
 }
 
 function classNames(...classes) {
@@ -71,6 +82,7 @@ export default function Header() {
                                 </div>
 
                                 {/* Links */}
+
                                 <Tab.Group as="div" className="mt-2">
                                     <div className="border-b border-gray-200">
                                         <Tab.List className="-mb-px flex space-x-8 px-4">
@@ -84,7 +96,25 @@ export default function Header() {
                                                         )
                                                     }
                                                 >
-                                                    {category.name}
+                                                    <NavLink to={"/"}>
+                                                        {category.name}
+                                                    </NavLink>
+                                                </Tab>
+                                            ))}
+
+                                            {navigation.lichChieu.map((category) => (
+                                                <Tab
+                                                    key={category.name}
+                                                    className={({ selected }) =>
+                                                        classNames(
+                                                            selected ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-black',
+                                                            'flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium'
+                                                        )
+                                                    }
+                                                >
+                                                    <NavLink to={"/list"}>
+                                                        {category.name}
+                                                    </NavLink>
                                                 </Tab>
                                             ))}
                                         </Tab.List>
@@ -93,11 +123,12 @@ export default function Header() {
                                 </Tab.Group>
 
                                 <div className="space-y-6 border-t border-gray-200 py-6 px-4">
-                                    {navigation.pages.map((page) => (
+
+
+                                    {navigation.ungdung.map((page) => (
                                         <div key={page.name} className="flow-root">
-                                            <a href={page.href} className="-m-2 block p-2 font-medium text-black">
-                                                {page.name}
-                                            </a>
+                                            <NavLink className="-m-2 block p-2 font-medium text-black" to={"/ungdung"}>{page.name}</NavLink>
+
                                         </div>
                                     ))}
                                 </div>
@@ -105,7 +136,6 @@ export default function Header() {
                                 <div className="space-y-6 border-t border-gray-300 py-6 px-4">
                                     <div className="flow-root">
                                         <Usermenu></Usermenu>
-
 
                                     </div>
 
@@ -134,35 +164,48 @@ export default function Header() {
                             </button>
 
                             {/* Logo */}
-                            <div className="ml-4 flex lg:ml-0">
-                                <a href="#">
-                                    <span className="sr-only">Your Company</span>
+                            <NavLink to={"/"}>
+                                <div className="ml-4 flex lg:ml-0">
+
+                                    <span className='sr-only'>Your Company</span>
+
                                     <img
                                         className="h-8 w-auto"
                                         src="https://demo1.cybersoft.edu.vn/logo.png"
                                         alt=""
                                     />
-                                </a>
-                            </div>
+
+
+                                </div></NavLink>
+
 
                             {/* Flyout menus */}
+
                             <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
                                 <div className="flex h-full space-x-8">
                                     {navigation.categories.map((category) => (
                                         <Popover key={category.name} className="flex">
                                             {({ open }) => (
                                                 <>
+
                                                     <div className="relative flex">
+
+
                                                         <Popover.Button
                                                             className={classNames(
                                                                 open
+
                                                                     ? 'border-indigo-600 text-indigo-600'
                                                                     : 'text-gray-700 hover:text-gray-800 ',
                                                                 'relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out'
                                                             )}
                                                         >
-                                                            {category.name}
+                                                            <NavLink to={"/"}>
+                                                                {category.name}
+                                                            </NavLink>
+
                                                         </Popover.Button>
+
                                                     </div>
 
                                                     <Transition
@@ -186,14 +229,63 @@ export default function Header() {
                                         </Popover>
                                     ))}
 
-                                    {navigation.pages.map((page) => (
-                                        <a
-                                            key={page.name}
-                                            href={page.href}
-                                            className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                                        >
-                                            {page.name}
-                                        </a>
+                                    {navigation.lichChieu.map((category) => (
+                                        <Popover key={category.name} className="flex">
+                                            {({ open }) => (
+                                                <>
+
+                                                    <div className="relative flex">
+
+
+                                                        <Popover.Button
+                                                            className={classNames(
+                                                                open
+
+                                                                    ? 'border-indigo-600 text-indigo-600'
+                                                                    : 'text-gray-700 hover:text-gray-800 ',
+                                                                'relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out'
+                                                            )}
+                                                        >
+                                                            <NavLink to={"/list"}>
+                                                                {category.name}
+                                                            </NavLink>
+
+                                                        </Popover.Button>
+
+                                                    </div>
+
+                                                    <Transition
+                                                        as={Fragment}
+                                                        enter="transition ease-out duration-200"
+                                                        enterFrom="opacity-0"
+                                                        enterTo="opacity-100"
+                                                        leave="transition ease-in duration-150"
+                                                        leaveFrom="opacity-100"
+                                                        leaveTo="opacity-0"
+                                                    >
+                                                        <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500">
+                                                            {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
+                                                            <div className="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
+
+
+                                                        </Popover.Panel>
+                                                    </Transition>
+                                                </>
+                                            )}
+                                        </Popover>
+                                    ))}
+
+                                    {navigation.rap.map((page) => (
+                                        <NavLink key={page.name}
+                                            className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800" to={"/rap"}>{page.name}</NavLink>
+
+                                    ))}
+
+                                    {navigation.ungdung.map((page) => (
+
+                                        <NavLink key={page.name}
+                                            className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800" to={"/ungdung"}>{page.name}</NavLink>
+
                                     ))}
                                 </div>
                             </Popover.Group>

@@ -87,7 +87,7 @@ export default function Usermenu() {
                 <>
                     <NavLink to={"/login"}>
 
-                        <a href="/login" className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                        <a href="" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                             Đăng nhập
                         </a>
                     </NavLink>

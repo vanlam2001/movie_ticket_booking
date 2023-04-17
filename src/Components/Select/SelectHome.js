@@ -16,12 +16,12 @@ export default function SelectHome() {
 
   useEffect(() => {
     movieServ.getMovieList()
-    .then((res) =>{
-      setLismovie(res.data.content)
-    })
-    .catch((err) => {
-      console.log(err)
-    })
+      .then((res) => {
+        setLismovie(res.data.content)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }, [])
   const searchBox = [
     {
@@ -36,7 +36,7 @@ export default function SelectHome() {
   ];
   //
   const getOptions = (type) => {
-    switch(type) {
+    switch (type) {
       case "Phim": {
         return lismovie?.map((item) => {
           return {
@@ -50,9 +50,9 @@ export default function SelectHome() {
         movieCinema?.heThongRapChieu?.forEach((item) => {
           item.cumRapChieu.forEach((cumRap) => {
             let newCumRap = {
-                value: JSON.stringify(cumRap),
-                label: cumRap.tenCumRap,
-              }
+              value: JSON.stringify(cumRap),
+              label: cumRap.tenCumRap,
+            }
             listCumRap.push(newCumRap)
           })
         })
@@ -67,7 +67,7 @@ export default function SelectHome() {
         })
       }
 
-      
+
       default:
         return lismovie?.map((item) => {
           return {
@@ -78,46 +78,46 @@ export default function SelectHome() {
     }
   }
   const handleChange = (id, label) => {
-    switch(label) {
-      case "Phim":  {
+    switch (label) {
+      case "Phim": {
         movieServ.getMovieSchelude(id)
-        .then((res) =>{
+          .then((res) => {
             setmovieCinema(res.data.content)
           })
           .catch((err) => {
-          console.log(err)
+            console.log(err)
           })
       }
-      break;
+        break;
       case "Rạp": {
         setMovieSchedule(JSON.parse(id));
       }
-      break;
+        break;
       case "Ngày giờ chiếu": {
         console.log("🚀 ~ file: SelectHome.js:106 ~ handleChange ~ id:", id)
         setidMovieTime(id)
       }
-      break;
-      default: 
+        break;
+      default:
     }
-  } 
+  }
   const handleBookTicket = () => {
-    if(idMovieTime == "") {
+    if (idMovieTime == "") {
       alert("Bạn chưa chọn phim");
     }
     else {
-      navigate(`/booking/${idMovieTime}`);
+      navigate(`/detail/${idMovieTime}`);
     }
   };
 
   return (
     <div className='container mx-auto mt-5'>
-        <div className='selectMovie flex items-center shadow rounded-md max-w-full w-[960px]  mx-auto px-5 py-2'>
-          <div className='listSelect flex grow'>
-            {searchBox.map((item, index) => {
-              return (
-                <div key={index} className="itemSelect grow px-2">
-                  <Select
+      <div className='selectMovie flex items-center shadow rounded-md max-w-full w-[960px]  mx-auto px-5 py-2'>
+        <div className='listSelect flex grow'>
+          {searchBox.map((item, index) => {
+            return (
+              <div key={index} className="itemSelect grow px-2">
+                <Select
                   className='w-full'
                   defaultValue={{
                     value: item.label,
@@ -125,20 +125,20 @@ export default function SelectHome() {
                   }}
                   placeholder={item.label}
                   optionFilterProp="children"
-                  onChange={(id) => {handleChange(id, item.label)}}
+                  onChange={(id) => { handleChange(id, item.label) }}
                   filterOption={(input, option) =>
                     (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
                   }
                   options={getOptions(item.label)}
                 />
-                </div>
-              )
-            })}
-          </div>
-          <div>
-            <button onClick={handleBookTicket} className='px-6 py-3 ml-4 bg-orange-500 rounded text-white'>Mua Vé Ngay</button>
-          </div>
+              </div>
+            )
+          })}
         </div>
+        <div>
+          <button onClick={handleBookTicket} className='px-6 py-3 ml-4 bg-orange-500 rounded text-white'>Mua Vé Ngay</button>
+        </div>
+      </div>
     </div>
   )
 }

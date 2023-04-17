@@ -20,5 +20,8 @@ export const movieServ = {
 
     getMovieByTheater: () => {
         return https.get("/api/QuanLyRap/LayThongTinLichChieuHeThongRap");
+    },
+    getMovieDetailSchedule: (id) => {
+        return https.get(`https://movienew.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${id}`);
     }
 }

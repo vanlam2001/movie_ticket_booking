@@ -21,7 +21,7 @@ export default function ItemMovie({ movie }) {
                     {movie.tenPhim}
                 </h3>
                 <p className='desc'>{movie.moTa}</p>
-                <NavLink to='/login'>
+                <NavLink to={`/detail/${movie.maPhim}`}>
                     <button className='btn_book'>Mua vé</button>
                 </NavLink>
             </div>
