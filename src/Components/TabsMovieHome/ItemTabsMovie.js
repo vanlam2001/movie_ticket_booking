@@ -1,5 +1,6 @@
 import moment from 'moment'
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function ItemTabsMovie({ phim }) {
     return (
@@ -12,16 +13,17 @@ export default function ItemTabsMovie({ phim }) {
                 </h3>
                 <div className='grid grid-cols-2 gap-4 mt-3'>
                     {phim.lstLichChieuTheoPhim.slice(0, 4).map((lichhieu, index) => {
-                        return <div key={index} className='px-2 py-1 border-2 rounded cursor-pointer'>
-                            <span className='text-green-500'>
-                                {moment(lichhieu.ngayChieuGioChieu).format('DD-mm-yyyy ')}
-                            </span>
-                            ~
-                            <span className='text-orange-500'>
-                                {moment(lichhieu.ngayChieuGioChieu).format(' hh:mm')}
-                            </span>
-
-                        </div>
+                        return <NavLink key={index} to={`/booking/${lichhieu.maLichChieu}`}>
+                            <div className='px-2 py-1 border-2 rounded cursor-pointer'>
+                                <span className='text-green-500'>
+                                    {moment(lichhieu.ngayChieuGioChieu).format('DD-mm-yyyy ')}
+                                </span>
+                                ~
+                                <span className='text-orange-500'>
+                                    {moment(lichhieu.ngayChieuGioChieu).format(' hh:mm')}
+                                </span>
+                            </div>
+                        </NavLink>
                     })}
                 </div>
             </div>
