@@ -8,6 +8,7 @@ import DetailPage from './Page/DetailPage/DetailPage';
 import ListMoveHome from './Page/HomePage/ListMoveHome/ListMoveHome';
 import TabsMovieHome from './Components/TabsMovieHome/TabsMovieHome';
 import DowloadApp from './Components/DowloadApp/DowloadApp';
+import NotFoundPage from './Page/NotFoundPage/NotFoundPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/rap' element={<Layout Component={TabsMovieHome} />}></Route>
           <Route path='/ungdung' element={<Layout Component={DowloadApp} />}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
+          <Route path='*' element={<Layout Component={HomePage} />}></Route>
 
 
         </Routes>
