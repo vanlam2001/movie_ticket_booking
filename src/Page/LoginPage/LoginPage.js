@@ -1,6 +1,6 @@
 import { Button, Checkbox, Form, Input, message } from 'antd';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Header from '../../Components/Header/Header';
 
 import { SET_USER_LOGIN } from '../../redux/constant/userConstant';
@@ -88,7 +88,7 @@ const LoginPage = () => {
                                 <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </span>
-                        <span className="ml-2">Create an Account</span>
+                        <NavLink to={"/register"} className="ml-2">Create an Account</NavLink>
                     </a>
                 </div>
             </div>
