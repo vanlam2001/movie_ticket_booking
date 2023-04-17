@@ -1,0 +1,27 @@
+Thông tin nhóm 1 lớp BC41 [CAPSTONE] movie
+
+Nguyễn Văn Lắm
+
+Header 
+Banner
+Login 
+Logout
+Register
+Validation
+Responsive 
+
+
+Đỗ Văn Long 
+Select 
+List Movie
+TabsMovie 
+Detail 
+DowloadApp 
+Footer
+Responsive
+
+
+
+
+
+
