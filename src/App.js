@@ -21,6 +21,7 @@ function App() {
           <Route path='/rap' element={<Layout Component={TabsMovieHome} />}></Route>
           <Route path='/ungdung' element={<Layout Component={DowloadApp} />}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
+          <Route path='*' element={<Layout Component={HomePage} />}></Route>
 
 
         </Routes>
