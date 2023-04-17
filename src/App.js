@@ -22,8 +22,6 @@ function App() {
           <Route path='/ungdung' element={<Layout Component={DowloadApp} />}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
           <Route path='*' element={<Layout Component={HomePage} />}></Route>
-
-
         </Routes>
       </BrowserRouter>
     </div>
