@@ -151,7 +151,7 @@ export default function Header() {
             <header className="relative bg-white">
 
 
-                <nav aria-label="Top" className=" bg-white  mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <nav aria-label="Top" className="shadow-md  z-50 fixed inset-x-0 top-0 left-0 bg-white  mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="border-b border-gray-200 ">
                         <div className="flex h-16 items-center">
                             <button
