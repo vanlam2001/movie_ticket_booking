@@ -11,7 +11,7 @@ export default function DowloadApp() {
         background: '#364d79',
       };
     return (
-        <div className="bg-img py-28 bg-left bg-contain my-20">
+        <div className="bg-img py-28 bg-left bg-contain mt-20">
             <div className='container max-w-full mx-auto text-white'>
                 <div className='max-w-[960px] px-6 w-full mx-auto flex flex-col md:flex-row items-center '>
                     <div className='md:w-1/2 md:text-left text-center w-full'>

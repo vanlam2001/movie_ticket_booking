@@ -1,17 +1,22 @@
 import { Pagination } from 'antd';
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { setLoadingOff, setLoadingOn } from '../../../redux/action/setLoading';
 import { movieServ } from '../../../service/movieService'
 import ItemMovie from './ItemMovie';
 
 export default function ListMoveHome() {
+    const dispatch = useDispatch();
     const [listMovie, setListMovie] = useState([]);
     const [numPage, setNumPage] = useState(0)
     useEffect(() => {
+        dispatch(setLoadingOn)
         movieServ.getMovieList()
             .then((res) => {
                 //tạo ra arr mới theo mỗi trang có 8 phim
                 let newListMovie = pageSplitListMovie(res.data.content, 8)
                 setListMovie(newListMovie);
+                dispatch(setLoadingOff);
             })
             .catch((err) => {
                 console.log(err)

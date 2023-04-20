@@ -3,19 +3,26 @@ import { Tabs } from 'antd';
 import { movieServ } from '../../service/movieService';
 import ItemTabsMovie from './ItemTabsMovie';
 import './tabsMovieHome.css'
+import { useDispatch } from 'react-redux';
+import { setLoadingOff, setLoadingOn } from '../../redux/action/setLoading';
 const onChange = (key) => {
     console.log(key);
 };
 
 export default function TabsMovieHome() {
+    const dispatch = useDispatch();
+
     const [danhSachHeThongrap, setSanhSachHeThongrap] = useState([])
 
     useEffect(() => {
+        dispatch(setLoadingOn)
         movieServ.getMovieByTheater()
             .then((res) => {
+                dispatch(setLoadingOff)
                 setSanhSachHeThongrap(res.data.content)
             })
             .catch((err) => {
+                dispatch(setLoadingOff)
                 console.log(err)
             })
 
