@@ -1,6 +1,7 @@
 import React from 'react'
+import { Carousel, initTE } from "tw-elements";
 
-
+initTE({ Carousel });
 
 const Banner = () => {
 
