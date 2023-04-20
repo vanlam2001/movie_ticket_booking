@@ -3,6 +3,7 @@ import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Usermenu from './Usermenu'
 import { NavLink } from 'react-router-dom'
+import './header.css'
 
 
 const navigation = {
@@ -151,7 +152,7 @@ export default function Header() {
             <header className="relative bg-white">
 
 
-                <nav aria-label="Top" className="shadow-md  z-50 fixed inset-x-0 top-0 left-0 bg-white  mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <nav aria-label="Top" className="navbar shadow-md inset-x-0 top-0 left-0  bg-white  mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="border-b border-gray-200 ">
                         <div className="flex h-16 items-center">
                             <button
