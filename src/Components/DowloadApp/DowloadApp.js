@@ -1,7 +1,15 @@
+import { Carousel } from 'antd';
 import React from 'react'
 import './dowloadApp.css'
 
 export default function DowloadApp() {
+    const contentStyle = {
+        height: '160px',
+        color: '#fff',
+        lineHeight: '160px',
+        textAlign: 'center',
+        background: '#364d79',
+      };
     return (
         <div className="bg-img py-28 bg-left bg-contain my-20">
             <div className='container max-w-full mx-auto text-white'>
@@ -25,35 +33,26 @@ export default function DowloadApp() {
                             className='w-full px-[28%] block relative' />
                         {/*  */}
                         <div className='absolute h-full w-full top-0 left-0 px-[29.2%] pt-[1.5%]'>
-                            <div id="default-carousel" className="relative w-full h-full" data-carousel="slide">
-                                {/* Carousel wrapper */}
-                                <div className="relative h-full overflow-hidden rounded-3xl">
-                                    {/* Item 1 */}
-                                    <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                        <img src="./img/app1.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                                    </div>
-                                    {/* Item 2 */}
-                                    <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                        <img src="./img/app2.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                                    </div>
-                                    {/* Item 3 */}
-                                    <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                        <img src="./img/app3.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                                    </div>
-                                    {/* Item 4 */}
-                                    <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                        <img src="./img/app4.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                                    </div>
-                                    {/* Item 5 */}
-                                    <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                        <img src="./img/app5.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                                    </div>
-                                    {/* Item 6 */}
-                                    <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                        <img src="./img/app6.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                                    </div>
-                                </div>
+                        <Carousel autoplay dots={false} className='rounded-3xl overflow-hidden'>
+                            <div>
+                                <img src="./img/app1.jpg" alt="" />
                             </div>
+                            <div>
+                                <img src="./img/app2.jpg" alt="" />
+                            </div>
+                            <div>
+                                <img src="./img/app3.jpg" alt="" />
+                            </div>
+                            <div>
+                                <img src="./img/app4.jpg" alt="" />
+                            </div>
+                            <div>
+                                <img src="./img/app5.jpg" alt="" />
+                            </div>
+                            <div>
+                                <img src="./img/app6.jpg" alt="" />
+                            </div>
+                        </Carousel>
                         </div>
                         {/*  */}
                     </div>
