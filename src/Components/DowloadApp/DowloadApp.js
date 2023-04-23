@@ -9,7 +9,7 @@ export default function DowloadApp() {
         lineHeight: '160px',
         textAlign: 'center',
         background: '#364d79',
-      };
+    };
     return (
         <div className="bg-img py-28 bg-left bg-contain mt-20">
             <div className='container max-w-full mx-auto text-white'>
